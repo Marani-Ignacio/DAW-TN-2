@@ -1,0 +1,162 @@
+.divHeader{
+    display: flex;
+    background-color: green;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.divHeader i{
+    margin-left: 5px;
+    color: white;
+}
+
+.divHeader i:hover{
+    color: black;
+}
+
+.divHeader span{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.navHeader{
+    display: none;
+    background-color: yellow;
+    border: 2px black;
+}
+
+.navHeader ul{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    margin: 0;
+}
+
+.navHeader ul li{
+    list-style: none;
+}
+
+.navHeader ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navHeader a:hover{
+    color: gray;
+}
+
+main {
+    width: 100%;
+    padding: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+section article div{
+    padding: 10px;
+    margin: 15px;
+    border: 1px solid black;
+}
+
+section article img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.divFooterRight i{
+    margin: 5px;
+}
+
+
+
+@media screen and (min-width: 800px){
+    .divHeader{
+        justify-content: center;
+    }
+
+    .divHeader i{
+        display: none;
+    }
+
+    .navHeader{
+        display: block;
+    }
+
+    main{
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .divArticle{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .divArticle div{
+        margin: 5px;
+    }
+
+    .divArticle div p{
+        font-size: small;
+    }
+
+    footer{
+        max-width: 700px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .divHeader{
+        justify-content: center;
+    }
+
+    .divHeader i{
+        display: none;
+    }
+
+    .navHeader{
+        display: block;
+    }
+
+    main{
+        max-width: 900px;
+        width: 100%;
+    }
+
+    .divArticle{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .divArticle div{
+        margin: 5px;
+    }
+
+    .divArticle div p{
+        font-size: small;
+    }
+
+    footer{
+        max-width: 900px;
+        width: 100%;
+    }
+}
