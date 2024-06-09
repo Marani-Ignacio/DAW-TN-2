@@ -81,6 +81,8 @@ footer{
     margin: 5px;
 }
 
+
+
 @media screen and (min-width: 800px){
     .divHeader{
         justify-content: center;
@@ -158,4 +160,3 @@ footer{
         width: 100%;
     }
 }
-
