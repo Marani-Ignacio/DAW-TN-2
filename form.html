@@ -6,7 +6,7 @@
     <title>DAW-09</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="formStyles.css">
-    <script src="validate.js"></script>
+    <script src="validate.js" defer></script>
 </head>
 <body>
     <h1>Agricultores Federados Argentinos</h1>
@@ -16,7 +16,7 @@
             <p>Nombre completo</p>
             <input type="text" name="name">
         </div>
-        <div>
+        <div> 
             <p>Email</p>
             <input type="email" name="email">
         </div>
@@ -24,19 +24,19 @@
             <p>Contraseña</p>
             <input type="password" name="password">
         </div>
-        <div>            
+        <div>          
             <p>Repita su contraseña</p>
             <input type="password" name="confirmPassword">
         </div>
-        <div>
+        <div> 
             <p>Edad</p>
             <input type="number" name="age">
         </div>
-        <div>
+        <div> 
             <p>Teléfono</p>
             <input type="tel" name="phone">
         </div>
-        <div>
+        <div> 
             <p>Dirección</p>
             <input type="text" name="address">
         </div>
@@ -62,7 +62,7 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <p>Successful Subscription!</p>
+            <p id="modalMessage"></p>
             <pre id="modalData"></pre>
         </div>
     </div>

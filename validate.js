@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dniInput = form.querySelector('input[name="dni"]');
     const modal = document.getElementById('modal');
     const modalData = document.getElementById('modalData');
+    const modalMessage = document.getElementById('modalMessage');
     const closeButton = document.querySelector('.close-button');
 
     const inputs = [
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isValid) {
             sendFormData();
         } else {
-            alert('Por favor, corrija los errores en el formulario.');
+            showModalWithMessage('Por favor, corrija los errores en el formulario.');
         }
     });
 
@@ -199,10 +200,10 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(data => {
             saveToLocalStorage();
-            showModalWithData();
+            showModalWithData(data);
         })
         .catch(error => {
-            alert(error.message);
+            showModalWithMessage(error.message);
         });
     }
 
@@ -221,11 +222,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function showModalWithData() {
+    function showModalWithData(data) {
+        modalMessage.textContent = 'Successful Subscription!';
+        modalData.textContent = JSON.stringify(data, null, 2);
+        modal.style.display = 'block';
+    }
+
+    function showModalWithMessage(message) {
+        modalMessage.textContent = message;
         modalData.textContent = '';
-        inputs.forEach(({ input }) => {
-            modalData.textContent += `${input.name}: ${input.value}\n`;
-        });
         modal.style.display = 'block';
     }
 
