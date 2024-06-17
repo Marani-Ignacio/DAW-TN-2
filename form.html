@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAW-08</title>
+    <title>DAW-09</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="formStyles.css">
     <script src="validate.js"></script>
@@ -11,7 +11,7 @@
 <body>
     <h1>Agricultores Federados Argentinos</h1>
     <p class="data">Ingrese sus datos personales:</p>
-    <form action="mailto:ignacio.marani.71@gmail.com?subject=Banco Nación" method="post" enctype="text/plain">
+    <form id="registrationForm">
         <div>
             <p>Nombre completo</p>
             <input type="text" name="name">
@@ -26,31 +26,31 @@
         </div>
         <div>            
             <p>Repita su contraseña</p>
-            <input type="password" name="password">
+            <input type="password" name="confirmPassword">
         </div>
         <div>
             <p>Edad</p>
-            <input type="age" name="age">
+            <input type="number" name="age">
         </div>
         <div>
             <p>Teléfono</p>
-            <input type="phone" name="phone">
+            <input type="tel" name="phone">
         </div>
         <div>
             <p>Dirección</p>
-            <input type="address" name="address">
+            <input type="text" name="address">
         </div>
         <div>
             <p>Ciudad</p>
-            <input type="city" name="city">
+            <input type="text" name="city">
         </div>
         <div>
             <p>Código Postal</p>
-            <input type="postalCode" name="postalCode">
+            <input type="text" name="postalCode">
         </div>
         <div>
             <p>Dni</p>
-            <input type="dni" name="dni">
+            <input type="text" name="dni">
         </div>
         <div class="buttons">
             <button class="submit" type="submit">Enviar</button>
@@ -58,5 +58,13 @@
             <a href="index.html" class="button">Volver</a>
         </div>      
     </form>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Successful Subscription!</p>
+            <pre id="modalData"></pre>
+        </div>
+    </div>
 </body>
 </html>
